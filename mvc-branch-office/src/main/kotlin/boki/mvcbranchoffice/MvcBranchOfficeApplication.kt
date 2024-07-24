@@ -1,14 +1,23 @@
 package boki.mvcbranchoffice
 
-import boki.core.Book
+import boki.core.BookResponse
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.context.annotation.Bean
 
 @SpringBootApplication
-class MvcBranchOfficeApplication
+class MvcBranchOfficeApplication {
+	@Bean
+	fun bookMap(): MutableMap<Long, BookResponse> {
+		val bookMap: MutableMap<Long, BookResponse> = HashMap()
+		for (i in 1..2000000) {
+			bookMap[i.toLong()] = BookResponse(i.toLong(), "IT Book$i", 2000)
+		}
+
+		return bookMap
+	}
+}
 
 fun main(args: Array<String>) {
-	val book = Book(bookId = 1L, name = "Spring Boot in Action", price = 5000)
-	println(book)
 	runApplication<MvcBranchOfficeApplication>(*args)
 }

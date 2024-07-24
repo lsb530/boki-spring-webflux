@@ -5,3 +5,6 @@ include(
     "spring-mvc:mvc-head-office",
     "spring-mvc:mvc-branch-office"
 )
+include(
+    "spring-reactive:reactive-branch-office"
+)

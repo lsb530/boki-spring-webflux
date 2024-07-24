@@ -1,7 +1,7 @@
 rootProject.name = "boki-spring-webflux"
 
+include("core")
 include(
-    "core",
-    "mvc-head-office",
-    "mvc-branch-office"
+    "spring-mvc:mvc-head-office",
+    "spring-mvc:mvc-branch-office"
 )

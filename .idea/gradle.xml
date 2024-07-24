@@ -9,8 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/mvc-branch-office" />
-            <option value="$PROJECT_DIR$/mvc-head-office" />
+            <option value="$PROJECT_DIR$/spring-mvc" />
+            <option value="$PROJECT_DIR$/spring-mvc/mvc-branch-office" />
+            <option value="$PROJECT_DIR$/spring-mvc/mvc-head-office" />
           </set>
         </option>
       </GradleProjectSettings>

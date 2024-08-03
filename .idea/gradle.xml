@@ -19,10 +19,20 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/learn" />
+        <option name="delegatedBuild" value="false" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/learn-java" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/learn" />
+            <option value="$PROJECT_DIR$/learn-java" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/learn-kt" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/learn-kt" />
           </set>
         </option>
       </GradleProjectSettings>

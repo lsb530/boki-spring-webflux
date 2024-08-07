@@ -13,7 +13,7 @@ public class PublisherProbeExample {
         return Mono.empty();
     }
 
-    public static Mono useStandbyPower() {
+    public static Mono<String> useStandbyPower() {
         return Mono.just("# use Standby Power");
     }
 }

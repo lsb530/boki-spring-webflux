@@ -16,7 +16,7 @@ class PublisherProbeExample {
             return Mono.empty()
         }
 
-        fun useStandbyPower(): Mono<*> {
+        fun useStandbyPower(): Mono<String> {
             return Mono.just("# use Standby Power")
         }
     }

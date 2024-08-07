@@ -19,22 +19,18 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="false" />
-        <option name="testRunner" value="PLATFORM" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/learn-java" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/spring-reactive-01/learn-java" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/learn-java" />
+            <option value="$PROJECT_DIR$/spring-reactive-01/learn-java" />
           </set>
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="false" />
-        <option name="testRunner" value="PLATFORM" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/learn-kt" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/spring-reactive-01/learn-kt" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/learn-kt" />
+            <option value="$PROJECT_DIR$/spring-reactive-01/learn-kt" />
           </set>
         </option>
       </GradleProjectSettings>

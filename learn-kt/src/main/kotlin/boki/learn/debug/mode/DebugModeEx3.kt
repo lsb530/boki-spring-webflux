@@ -8,7 +8,7 @@ import java.util.*
  * Non-Debug mode
  */
 fun main() {
-    val fruits: MutableMap<String, String> = HashMap()
+    val fruits: MutableMap<String, String> = hashMapOf()
     initFruitMap(fruits)
 
     Flux.fromArray(arrayOf("BANANAS", "APPLES", "PEARS", "MELONS"))

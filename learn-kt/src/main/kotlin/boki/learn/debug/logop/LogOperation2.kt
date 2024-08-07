@@ -1,33 +1,28 @@
-package boki.learn.debug.mode
+package boki.learn.debug.logop
 
+import boki.learn.debug.logop.FruitMap.fruits
 import boki.learn.util.Logger
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Hooks
 import java.util.*
 
 /**
- * onOperatorDebug() Hook 메서드를 이용한 Debug mode 예제
+ * log() operator와 Debug mode 를 같이 사용한 예제
+ * - log()는 에러 발생 시, stacktrace와 함께 traceback도 같이 출력한다.
  */
 fun main() {
-    val fruits: MutableMap<String, String> = hashMapOf()
-    initFruitMap(fruits)
-
     Hooks.onOperatorDebug()
 
     Flux.fromArray(arrayOf("BANANAS", "APPLES", "PEARS", "MELONS"))
+        .log()
         .map { it.lowercase(Locale.getDefault()) }
+        .log()
         .map { it.dropLast(1) }
-        // .mapNotNull { fruits[it] }
-        .map { fruits[it] } // NPE
+        .log()
+        .map { fruits[it] }
+        .log()
         .subscribe(
             { data -> Logger.onNext(data) },
             { error -> Logger.onError(error) }
         )
-}
-
-private fun initFruitMap(fruits: MutableMap<String, String>) {
-    fruits["banana"] = "바나나"
-    fruits["apple"] = "사과"
-    fruits["pear"] = "배"
-    fruits["grape"] = "포도"
 }

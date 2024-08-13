@@ -1,4 +1,4 @@
-package boki.learnjava.newsequence.range;
+package boki.learnjava.v1_newsequence.range;
 
 import boki.learnjava.utils.Logger;
 import reactor.core.publisher.Flux;

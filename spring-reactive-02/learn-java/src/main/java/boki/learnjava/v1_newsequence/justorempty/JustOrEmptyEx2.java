@@ -1,4 +1,4 @@
-package boki.learnjava.newsequence.justorempty;
+package boki.learnjava.v1_newsequence.justorempty;
 
 import boki.learnjava.utils.Logger;
 import reactor.core.publisher.Mono;

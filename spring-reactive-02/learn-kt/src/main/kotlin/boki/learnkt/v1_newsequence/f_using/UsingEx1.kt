@@ -1,0 +1,21 @@
+package boki.learnkt.v1_newsequence.f_using
+
+import boki.learnkt.util.Logger
+import reactor.core.publisher.Mono
+
+/**
+ * using() 예제
+ * - 파라미터
+ * 1. Callable: Resource를 input으로 제공
+ * 2. Function: input으로 전달받은 Resource를 새로 생성한 Publisher로 emit(Flux)
+ * 3. Consumer: 사용이 끝난 Resource를 해제
+ */
+fun main() {
+    Mono
+        .using(
+            { "Resource" },
+            { Mono.just(it) },
+            { Logger.info("cleanup: $it") }
+        )
+        .subscribe { Logger.onNext(it) }
+}

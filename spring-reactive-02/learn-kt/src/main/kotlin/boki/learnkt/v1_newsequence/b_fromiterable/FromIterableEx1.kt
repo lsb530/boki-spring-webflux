@@ -1,4 +1,4 @@
-package boki.learnkt.v1_newsequence.fromiterable
+package boki.learnkt.v1_newsequence.b_fromiterable
 
 import boki.learnjava.common.SampleData
 import boki.learnkt.util.Logger

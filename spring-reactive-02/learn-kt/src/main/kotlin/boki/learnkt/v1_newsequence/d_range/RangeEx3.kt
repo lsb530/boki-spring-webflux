@@ -1,4 +1,4 @@
-package boki.learnkt.v1_newsequence.range
+package boki.learnkt.v1_newsequence.d_range
 
 import boki.learnjava.common.SampleData
 import boki.learnkt.util.Logger

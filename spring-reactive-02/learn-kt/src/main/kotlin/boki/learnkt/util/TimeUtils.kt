@@ -1,11 +1,11 @@
-package boki.learnkt.util;
+package boki.learnkt.util
 
-public class TimeUtils {
-    public static void sleep(long milliseconds) {
+object TimeUtils {
+    fun sleep(milliseconds: Long) {
         try {
-            Thread.sleep(milliseconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.sleep(milliseconds)
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
         }
     }
 }

@@ -13,20 +13,48 @@ object Logger {
         log.info(msg, data)
     }
 
+    fun info(msg: String?, data1: Any?, data2: Any?) {
+        log.info(msg, data1, data2)
+    }
+
     fun doOnNext(data: Any?) {
         log.info("# doOnNext(): {}", data)
     }
 
-    fun doOnNext(operator: String?, data: Any?) {
-        log.info("# doOnNext() {}: {}", operator, data)
+    fun doOnNext(data1: Any?, data2: Any?) {
+        log.info("# doOnNext(): {} {}", data1, data2)
     }
 
-    fun doOnNext(taskName: String?, operator: String?, data: Any?) {
+    fun doOnNext(taskName: String, operator: String, data: Any?) {
         log.info("# doOnNext() {} {}: {}", taskName, operator, data)
+    }
+
+    fun doOnSubscribe() {
+        log.info("# doOnSubscribe()")
+    }
+
+    fun doFirst() {
+        log.info("# doFirst()")
+    }
+
+    fun doFinally(data: Any?) {
+        log.info("# doFinally(): {}", data)
     }
 
     fun doOnRequest(data: Any?) {
         log.info("# doOnRequest(): {}", data)
+    }
+
+    fun doOnComplete() {
+        log.info("# doOnComplete()")
+    }
+
+    fun doOnTerminate(operator: String) {
+        log.info("# doOnTerminate(): {}", operator)
+    }
+
+    fun doAfterTerminate(operator: String) {
+        log.info("# doAfterTerminate() {}", operator)
     }
 
     fun onNext(data: Any?) {
@@ -35,6 +63,10 @@ object Logger {
 
     fun onNext(data1: Any?, data2: Any?) {
         log.info("# onNext(): {} : {}", data1, data2)
+    }
+
+    fun onNext(message: String, data1: Any?, data2: Any?) {
+        log.info("# onNext() {}: {} {}", message, data1, data2)
     }
 
     fun onError(error: Throwable?) {
@@ -52,7 +84,6 @@ object Logger {
     fun onNext(message: String?, data: Any?) {
         log.info("# {} onNext(): {}", message, data)
     }
-
 
     fun filter(data: Any?) {
         log.info("# filter(): {}", data)

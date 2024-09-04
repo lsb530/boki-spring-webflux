@@ -69,8 +69,16 @@ object Logger {
         log.info("# onNext() {}: {} {}", message, data1, data2)
     }
 
+    fun onError(message: String) {
+        log.error(message)
+    }
+
     fun onError(error: Throwable?) {
         log.error("error happened: ", error)
+    }
+
+    fun onError(message: String, error: Throwable, data: Any?) {
+        log.error(message, error, data)
     }
 
     fun onComplete() {

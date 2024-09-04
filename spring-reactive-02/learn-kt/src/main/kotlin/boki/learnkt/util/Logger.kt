@@ -74,7 +74,7 @@ object Logger {
     }
 
     fun onComplete() {
-        log.error("# onComplete()")
+        log.info("# onComplete()")
     }
 
     fun onComplete(data: Any?) {

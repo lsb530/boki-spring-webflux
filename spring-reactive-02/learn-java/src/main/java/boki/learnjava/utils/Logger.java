@@ -1,6 +1,7 @@
 package boki.learnjava.utils;
 
 import lombok.extern.slf4j.Slf4j;
+import org.reactivestreams.Subscription;
 
 @Slf4j
 public class Logger {
@@ -32,6 +33,10 @@ public class Logger {
         log.info("# doOnSubscribe()");
     }
 
+    public static void doOnSubscribe(Subscription subscription) {
+        log.info("# doOnSubscribe() in {} thread", Thread.currentThread().getName());
+    }
+
     public static void doFirst() {
         log.info("# doFirst()");
     }
@@ -41,7 +46,7 @@ public class Logger {
     }
 
     public static void doOnRequest(Object data) {
-        log.info("# doOnRequest(): {}", data);
+        log.info("# doOnRequest()");
     }
 
     public static void doOnComplete() {

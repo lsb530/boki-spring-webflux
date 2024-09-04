@@ -1,5 +1,6 @@
 package boki.learnkt.util
 
+import org.reactivestreams.Subscription
 import org.slf4j.LoggerFactory
 
 object Logger {
@@ -33,6 +34,10 @@ object Logger {
         log.info("# doOnSubscribe()")
     }
 
+    fun doOnSubscribe(data: Subscription) {
+        log.info("# doOnSubscribe() in {} thread", Thread.currentThread().name)
+    }
+
     fun doFirst() {
         log.info("# doFirst()")
     }
@@ -41,16 +46,24 @@ object Logger {
         log.info("# doFinally(): {}", data)
     }
 
+    fun doOnRequest() {
+        log.info("# doOnRequest()")
+    }
+
     fun doOnRequest(data: Any?) {
-        log.info("# doOnRequest(): {}", data)
+        log.info("# doOnRequest()")
     }
 
     fun doOnComplete() {
         log.info("# doOnComplete()")
     }
 
-    fun doOnTerminate(operator: String) {
-        log.info("# doOnTerminate(): {}", operator)
+    fun doOnTerminate() {
+        log.info("# doOnTerminate()")
+    }
+
+    fun doOnTerminate(data: Any?) {
+        log.info("# doOnTerminate() - {}", data)
     }
 
     fun doAfterTerminate(operator: String) {

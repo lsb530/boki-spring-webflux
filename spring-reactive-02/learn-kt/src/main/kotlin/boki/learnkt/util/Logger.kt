@@ -82,6 +82,10 @@ object Logger {
         log.info("# onNext() {}: {} {}", message, data1, data2)
     }
 
+    fun onNextDropped(data: Any?) {
+        log.info("# onNextDropped(): {}", data)
+    }
+
     fun onError(message: String) {
         log.error(message)
     }

@@ -93,6 +93,9 @@ public class Logger {
         log.info("# {} onNext(): {}", message, data);
     }
 
+    public static void onNextDropped(Object data) {
+        log.info("# onNextDropped(): {}", data);
+    }
 
     public static void filter(Object data) {
         log.info("# filter(): {}", data);
